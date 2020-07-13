@@ -13,5 +13,11 @@ namespace Snake
             pointsList = new List<Point>();
             for (int y = yTop; y <= yBottom; y++) pointsList.Add(new Point(x, y, sym));
         }
+        public override void Draw()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            base.Draw();
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
