@@ -18,9 +18,9 @@ namespace Snake
             leftLine.Draw();
             rightLine.Draw();
 
-            Employee e = new Employee();
-            e.age = 42;
-            e.pay = 30000;
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
             Console.ReadKey();
         }
