@@ -46,6 +46,8 @@ namespace Snake
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
+                Console.SetCursorPosition(1,1);
+                Console.Write($"Счет: {snake.eatedFoodCount}");
                 Thread.Sleep(100);
                 snake.Move();
             }

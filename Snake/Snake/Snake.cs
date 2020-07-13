@@ -9,6 +9,7 @@ namespace Snake
     class Snake : Figure
     {
         public Direction direction;
+        public int eatedFoodCount = 0;
         public Snake(Point tail, int length, Direction direction)
         {
             this.direction = direction;
@@ -55,6 +56,7 @@ namespace Snake
             {
                 food.sym = head.sym;
                 pointsList.Add(food);
+                eatedFoodCount++;
                 return true;
             }
             else
