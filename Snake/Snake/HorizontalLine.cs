@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class VerticalLine : Figure
+    class HorizontalLine : Figure
     {
-        public VerticalLine(int yTop, int yBottom, int x, char sym)
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pointsList = new List<Point>();
-            for (int y = yTop; y <= yBottom; y++) pointsList.Add(new Point(x, y, sym));
+            for (int x = xLeft; x <= xRight; x++) pointsList.Add(new Point(x, y, sym));
         }
     }
 }
