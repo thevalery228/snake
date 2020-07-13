@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class Figure
-    {
-        protected List<Point> pointsList;
-        public virtual void Draw()
-        {
-            foreach (Point p in pointsList)
-            {
-                p.Draw();
-            }
-        }
+	class Figure
+	{
+		protected List<Point> pointsList;
+
+		public virtual void Draw()
+		{
+			foreach (Point p in pointsList)
+			{
+				p.Draw();
+			}
+		}
 
 		internal bool IsHit(Figure figure)
 		{
