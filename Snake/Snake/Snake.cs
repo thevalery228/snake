@@ -65,6 +65,7 @@ namespace Snake
 			Point head = GetNextPoint();
 			if (head.IsHit(food))
 			{
+				eatedFoodCount++;
 				food.sym = head.sym;
 				pointsList.Add(food);
 				return true;
