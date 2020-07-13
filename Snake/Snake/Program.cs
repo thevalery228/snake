@@ -14,7 +14,7 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            List<int> numList = new List<int>();
+            SampleCollection<int> numList = new SampleCollection<int>();
             numList.Add(0);
             numList.Add(1);
             numList.Add(2);
@@ -23,14 +23,14 @@ namespace Snake
             int y = numList[1];
             int z = numList[2];
 
-            foreach (int i in numList)
+            for (int i=0; i<numList.Count; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(numList[i]);
             }
 
             numList.RemoveAt(0);
 
-            List<Point> pList = new List<Point>();
+            SampleCollection<Point> pList = new SampleCollection<Point>();
             pList.Add(p1);
             pList.Add(p2);
 
