@@ -13,15 +13,6 @@ namespace Snake
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
-            /*HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
-            HorizontalLine downLine = new HorizontalLine(0, 78, 23, '+');
-            VerticalLine leftLine = new VerticalLine(0, 23, 0, '+');
-            VerticalLine rightLine = new VerticalLine(0, 23, 78, '+');
-            upLine.Draw();
-            downLine.Draw();
-            leftLine.Draw();
-            rightLine.Draw();*/
-
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
@@ -34,6 +25,10 @@ namespace Snake
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
+                    snake.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.SetCursorPosition(40, 12);
+                    Console.Write("GAME OVER.");
                     break;
                 }
                 if (snake.Eat(food))

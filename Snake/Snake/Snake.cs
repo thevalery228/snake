@@ -72,5 +72,7 @@ namespace Snake
             }
             return false;
         }
+
+        public void Clear() { foreach (Point p in pointsList) { p.Clear(); } }
     }
 }
