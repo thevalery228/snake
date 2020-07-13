@@ -15,7 +15,6 @@ namespace Snake
             {
                 p.Draw();
             }
-
         }
     }
 }

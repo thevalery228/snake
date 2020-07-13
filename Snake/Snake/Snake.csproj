@@ -46,6 +46,7 @@
     <Compile Include="Direction.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Figure.cs" />
+    <Compile Include="FoorCreator.cs" />
     <Compile Include="HorizontalLine.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Point.cs" />
