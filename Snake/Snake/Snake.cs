@@ -60,5 +60,17 @@ namespace Snake
             else
                 return false;
         }
+
+        public bool IsHitTail()
+        {
+            for (int i=0; i<pointsList.Count; i++)
+            {
+                for (int j = i + 1; j< pointsList.Count; j++)
+                {
+                    if (pointsList[i].x == pointsList[j].x && pointsList[i].y == pointsList[j].y) return true;
+                }
+            }
+            return false;
+        }
     }
 }
