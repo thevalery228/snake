@@ -44,10 +44,11 @@ namespace Snake
 				Thread.Sleep(100);
 				if (Console.KeyAvailable)
 				{
+					Console.SetCursorPosition(snake.GetNextPoint().x, snake.GetNextPoint().y);
 					ConsoleKeyInfo key = Console.ReadKey();
 					snake.HandleKey(key.Key);
 				}
-				walls.Draw();
+				//walls.Draw();
 				Console.SetCursorPosition(1, 1);
 				Console.Write($"Счет: {snake.eatedFoodCount}");
 			}
