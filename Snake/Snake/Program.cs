@@ -17,7 +17,7 @@ namespace Snake
 			Snake snake = new Snake(p, 4, Direction.RIGHT);
 			snake.Draw();
 
-			FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+			FoodCreator foodCreator = new FoodCreator(79, 24, '$');
 			Point food = foodCreator.CreateFood();
 			food.Draw();
 
