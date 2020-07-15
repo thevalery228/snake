@@ -12,6 +12,7 @@ namespace Snake
 		public int eatedFoodCount = 0;
 
 		public Point Head { get { return pointsList.Last(); } }
+		public Point Tail { get { return pointsList.First(); } }
 		public Snake(Point tail, int length, Direction _direction)
 		{
 			direction = _direction;
