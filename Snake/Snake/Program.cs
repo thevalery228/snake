@@ -44,8 +44,9 @@ namespace Snake
 				Thread.Sleep(100);
 				if (Console.KeyAvailable)
 				{
-					Console.SetCursorPosition(snake.GetNextPoint().x, snake.GetNextPoint().y);
+					Console.SetCursorPosition(snake.Head.x, snake.Head.y);
 					ConsoleKeyInfo key = Console.ReadKey();
+					snake.Draw();
 					snake.HandleKey(key.Key);
 				}
 				//walls.Draw();

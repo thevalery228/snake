@@ -10,6 +10,8 @@ namespace Snake
 	{
 		Direction direction;
 		public int eatedFoodCount = 0;
+
+		public Point Head { get { return pointsList.Last(); } }
 		public Snake(Point tail, int length, Direction _direction)
 		{
 			direction = _direction;

@@ -42,8 +42,10 @@ namespace Snake
 
         public void Clear()
         {
+            char oldSym = sym;
             sym = ' ';
             Draw();
+            sym = oldSym;
         }
         public bool IsHit(Point p)
         {
