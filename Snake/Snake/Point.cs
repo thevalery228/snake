@@ -29,7 +29,7 @@ namespace Snake
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
-            Console.WriteLine(sym);
+            Console.Write(sym);
         }
 
         public void Move(int offset, Direction direction)
@@ -45,7 +45,7 @@ namespace Snake
             char oldSym = sym;
             sym = ' ';
             Draw();
-            sym = oldSym;
+            //sym = oldSym;
         }
         public bool IsHit(Point p)
         {

@@ -31,6 +31,9 @@ namespace Snake
 					Console.Write("GAME OVER.");
 					break;
 				}
+
+				int x, y;
+
 				if (snake.Eat(food))
 				{
 					food = foodCreator.CreateFood();
@@ -38,16 +41,23 @@ namespace Snake
 				}
 				else
 				{
-					snake.Move();
-				}
+					x = Console.CursorLeft;
+					y = Console.CursorTop;
 
+					snake.Move();
+
+					x = Console.CursorLeft;
+					y = Console.CursorTop;
+				}
 				Thread.Sleep(100);
+
 				if (Console.KeyAvailable)
 				{
-					Console.SetCursorPosition(snake.Tail.x, snake.Tail.y);
+					//Console.SetCursorPosition(snake.Tail.x, snake.Tail.y);
 					ConsoleKeyInfo key = Console.ReadKey();
 					snake.HandleKey(key.Key);
 				}
+
 				//walls.Draw();
 				Console.SetCursorPosition(1, 1);
 				Console.Write($"Счет: {snake.eatedFoodCount}");
